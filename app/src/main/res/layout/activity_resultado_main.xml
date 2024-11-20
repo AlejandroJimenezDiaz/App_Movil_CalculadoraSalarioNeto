@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultadoActivity_main">
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vttitulo"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginHorizontal="16sp"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo2"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vtresultadoSalarioBruto"
+        android:layout_width="0sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="60sp"
+        android:layout_marginHorizontal="16sp"
+        app:cardCornerRadius="8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vtresultadoSalarioNeto"
+        app:layout_constraintTop_toBottomOf="@id/vttitulo"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/salario_bruto"
+                android:textAlignment="center"
+                android:padding="3sp"/>
+
+            <TextView
+                android:id="@+id/SolucionSalarioBruto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/solucionSalarioBruto"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vtresultadoSalarioNeto"
+        android:layout_width="0sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="60sp"
+        android:layout_marginHorizontal="16sp"
+        app:cardCornerRadius="8sp"
+        app:layout_constraintStart_toEndOf="@id/vtresultadoSalarioBruto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vttitulo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salario_neto"
+                android:textAlignment="center"
+                android:padding="1sp"/>
+
+            <TextView
+                android:id="@+id/SolucionSalarioNeto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/solucionsalarioneto"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/SposiblesDeducciones"
+        android:layout_width="0sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="60sp"
+        android:layout_marginHorizontal="16sp"
+        app:cardCornerRadius="8sp"
+        app:layout_constraintTop_toBottomOf="@id/vtresultadoSalarioBruto"
+        app:layout_constraintEnd_toStartOf="@id/SRetencionIRPF"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvposibles_deducciones"/>
+
+        <TextView
+            android:id="@+id/SolucionDeducciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/solucionDeducciones"/>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/SRetencionIRPF"
+        android:layout_width="0sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="60sp"
+        android:layout_marginHorizontal="8sp"
+        app:cardCornerRadius="8sp"
+        app:layout_constraintTop_toBottomOf="@id/vtresultadoSalarioNeto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/SposiblesDeducciones">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvretencion_irpf"/>
+
+            <TextView
+                android:id="@+id/SolucionIRPF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/solucionIRPF"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vtsalariomensual"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="80sp"
+        android:layout_marginHorizontal="16sp"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SposiblesDeducciones"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cuota_mensual"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/SolucionpagaMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SolucionpagaMes"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnReCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SposiblesDeducciones"
+        android:text="@string/recalcular"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<resources>
+
+    <string name="app_name">My Application_SalarioNeto</string>
+    <string name="app_intro">Calculadora Salario Neto</string>
+    <string name="campo_salarioNeto">Salario Neto</string>
+    <string name="campo_Edad">Edad</string>
+    <string name="campo_GradoDeDiscapacidad">Grado de Discapacidad</string>
+    <string name="campo_numeroDeHijos">Nº de Hijos</string>
+    <string name="campo_grupoProfesional">Grupo Profesional</string>
+    <string name="campo_estadoCivil">Estado Civil</string>
+    <string name="edad_seleccion">30</string>
+    <string name="nHijos_seleccion">3</string>
+
+    <string name="titulo2">Resultados</string>
+    <string name="solucionSalarioBruto">solucion</string>
+    <string name="salario_bruto">Salario Bruto :</string>
+    <string name="salario_neto">Salario Neto :</string>
+    <string name="solucionsalarioneto">SolucionSalarioNeto</string>
+    <string name="solucionDeducciones">Solucion</string>
+    <string name="tvposibles_deducciones">Posibles Deducciones :</string>
+    <string name="tvretencion_irpf">Retencion IRPF :</string>
+    <string name="solucionIRPF">Solucion</string>
+    <string name="recalcular">RECALCULAR</string>
+    <string name="cantidadSalarioNeto">cantidad (€)</string>
+    <string name="campo_salarioBruto">salario Bruto</string>
+    <string name="cantidadSalarioBruto">cantidad (€)</string>
+    <string name="calcularbton">CALCULAR</string>
+    <string name="textn_pagas">Nº Pagas</string>
+    <string name="nPagasText">14</string>
+    <string name="dato_mes">dato mes</string>
+    <string name="cuota_mensual">Cuota Mensual :</string>
+    <string name="SolucionpagaMes">SolucionPagaMes</string>
+
+
+    <string-array name="grupo_profesional_array">
+        <item>Ingeniero</item>
+        <item>Licenciados</item>
+        <item>Autonomos</item>
+        <item>Oficiales</item>
+        <item>SubAlternos</item>
+        <item>Jefes</item>
+    </string-array>
+    <string-array name="estado_civil_array">
+        <item>Soltero</item>
+        <item>Casado</item>
+        <item>Separado</item>
+        <item>Divorciado</item>
+        <item>Viudo</item>
+        <item>Conyuge con ingreso mas 1500</item>
+        <item>Conyuge con ingreso menos 1500</item>
+    </string-array>
+
+    <string-array name="grado_discapacidad_array">
+        <item>Sin discapacidad</item>
+        <item>Menos del 65% (sin asistencia)</item>
+        <item>Menos del 65% (con asistencia)</item>
+        <item>Mayor o igual al 65%</item>
+    </string-array>
+
+</resources>
