@@ -31,14 +31,14 @@ class ResultadoActivity_main : AppCompatActivity() {
         val salarioMensual = intent.getDoubleExtra("SALARIO_MENSUAL", 0.0)
         val decimalFormat = DecimalFormat("#.## €")
 
-        // Mostrar estos datos en tu interfaz de usuario
+        // Mostrar los datos sus correspondientes campos
         findViewById<TextView>(R.id.SolucionSalarioBruto).text = decimalFormat.format(salarioBruto)
         findViewById<TextView>(R.id.SolucionSalarioNeto).text = decimalFormat.format(salarioNeto)
         findViewById<TextView>(R.id.SolucionIRPF).text = decimalFormat.format(retencionIRPF)
         findViewById<TextView>(R.id.SolucionDeducciones).text = decimalFormat.format(deducciones)
         findViewById<TextView>(R.id.SolucionpagaMes).text = decimalFormat.format(salarioMensual)
         btnRecalcular.setOnClickListener {
-            finish()
+            finish()//nos devuelve a la pantalla anterior
         }
     }
 }

@@ -17,7 +17,7 @@ import com.google.android.material.textfield.TextInputEditText
 class MainActivity : AppCompatActivity() {
 
 
-    //Vistas recogidas del xml
+    //Vistas
     private lateinit var cardEdad: CardView
     private lateinit var cardHijos: CardView
     private lateinit var cardSalario: CardView
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardDiscapacidad: CardView
     private lateinit var cardPaga: CardView
 
-    //Campo de datos recogidos del xml
+    //Campo de datos
     private lateinit var datoEdad: TextView
     private lateinit var datoHijos: TextView
     private lateinit var datoSalarioBruto: TextInputEditText
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var datoDiscapacidad: Spinner
     private lateinit var datoPaga: TextView
 
-    //campo accion botones recogidos del xml
+    //campo accion botones
     private lateinit var btnRestarEdad: FloatingActionButton
     private lateinit var btnSumarEdad: FloatingActionButton
     private lateinit var btnRestarHijos: FloatingActionButton
@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initComponentes() {
+        //vistas
         this.cardEdad = findViewById(R.id.Edad)
         this.cardHijos = findViewById(R.id.hijos)
         this.cardSalario = findViewById(R.id.SalarioNeto)
@@ -73,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         this.cardEstadoCivil = findViewById(R.id.EstadoCivil)
         this.cardDiscapacidad = findViewById(R.id.GradoDiscapacidad)
         this.cardPaga = findViewById(R.id.Paga)
-        //campos de datos, textview y texInput
+        //campo de datos
         this.datoEdad = findViewById(R.id.datoEdad)
         this.datoHijos = findViewById(R.id.datoHijos)
         this.datoSalarioBruto = findViewById(R.id.datoSalarioBruto)
@@ -81,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         this.datoEstadoCivil = findViewById(R.id.datoEstadoCivil)
         this.datoDiscapacidad = findViewById(R.id.datoGradoDiscapacidad)
         this.datoPaga = findViewById(R.id.datoPaga)
-
+        //botones
         this.btnRestarEdad = findViewById(R.id.btnRestarEdad)
         this.btnSumarEdad = findViewById(R.id.btnSumarEdad)
         this.btnRestarHijos = findViewById(R.id.btnRestarHijos)
@@ -125,7 +126,7 @@ class MainActivity : AppCompatActivity() {
             if (numerodePagas > 12) numerodePagas--
             datoPaga.text = numerodePagas.toString()
         }
-
+        //boton calcular, nos pasara de pantalla automaticamente al presionar
         btnCalcular.setOnClickListener {
             val salarioNeto = calcularSalarioNeto()
             val retencionIRPF = calcularIRPF()
@@ -151,7 +152,7 @@ class MainActivity : AppCompatActivity() {
     private fun calcularIRPF(): Double {
         // Obtener los valores de salario, hijos y estado civil
         val salarioBruto = datoSalarioBruto.text.toString().toDoubleOrNull() ?: 0.0
-        val hijos = hijos // Asegúrate de tener la variable hijos correctamente definida
+        val hijos = hijos //Obtenemos el valor de hijo
         val estadoCivil =
             datoEstadoCivil.selectedItem.toString() // Obtener el estado civil seleccionado
         var retencionIRPF = 0.0
@@ -173,7 +174,7 @@ class MainActivity : AppCompatActivity() {
 
         // Ajustar IRPF según el número de hijos
         if (hijos == 1) {
-            //  //con 1 hijo1 aplicacamos porcentajes segun rango de ingreso
+            //con 1 hijo aplicacamos porcentajes segun rango de ingreso
             if (salarioBruto in 17644.0..18694.0) {
                 retencionIRPF -= retencionIRPF * 0.05 // Descuento del 5% para grupo A con 1 hijo
             } else if (salarioBruto in 18130.0..19262.0) {
@@ -203,10 +204,6 @@ class MainActivity : AppCompatActivity() {
             "Cónyuge con menos de 1.500 €" -> {
                 retencionIRPF -= retencionIRPF * 0.05 // Descuento del 5% si el cónyuge gana menos de 1.500 €
 
-            }
-
-            else -> {
-                // Otras situaciones (Si es necesario, se puede hacer algo adicional)
             }
         }
 
@@ -248,17 +245,9 @@ class MainActivity : AppCompatActivity() {
 
                 solucion = calcularIRPF() + 3000
             }
-
-            else -> {
-                // Otras situaciones (Si es necesario, se puede hacer algo adicional)
-            }
-
-
         }
         return solucion
     }
-
-
 }
 
 
